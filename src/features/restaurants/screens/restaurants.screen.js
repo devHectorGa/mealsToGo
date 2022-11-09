@@ -1,23 +1,17 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {Searchbar} from 'react-native-paper';
 import {RestaurantInfoCard} from '../components/restaurant-info-card.component';
+import {ElementContainer, MainContainer} from './restaurants.screen.styles';
 
 export const RestaurantsScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.search}>
+    <MainContainer>
+      <ElementContainer>
         <Searchbar />
-      </View>
-      <View style={styles.list}>
+      </ElementContainer>
+      <ElementContainer full>
         <RestaurantInfoCard />
-      </View>
-    </SafeAreaView>
+      </ElementContainer>
+    </MainContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {flex: 1},
-  search: {padding: 16},
-  list: {padding: 16, flex: 1},
-});

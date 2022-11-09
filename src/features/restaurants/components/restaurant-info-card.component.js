@@ -1,14 +1,6 @@
 import React from 'react';
-import styled from 'styled-components/native';
-import {Card, Text} from 'react-native-paper';
-
-const Title = styled(Text)`
-  padding: 20px;
-`;
-
-const Cover = styled(Card.Cover)`
-  padding: 20px;
-`;
+import {Card, Title} from 'react-native-paper';
+import {Cover} from './restaurant-info-card.styles';
 
 export const RestaurantInfoCard = ({restaurant = {}}) => {
   const {
